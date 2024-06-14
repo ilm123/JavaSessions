@@ -12,6 +12,12 @@ public class TestUni {
 		uni.mscSoftwareEngineering(); //individual
 		
 		System.out.println();		
+		System.out.println("HigherEducationInstitue class");
+		HigherEducationInstitue he = new HigherEducationInstitue();
+		he.careerPath();
+		he.englishDiploma();
+		
+		System.out.println();		
 		System.out.println("Cornell class");
 		
 		Cornell corn = new Cornell();
@@ -35,9 +41,12 @@ public class TestUni {
 		Xavior xav = new Xavior();
 		xav.careerPath(); //inherited
 		xav.bscComputerScience(); //inherited
-		xav.mscSoftwareEngineering(); //overridden
-		
+		xav.mscSoftwareEngineering(); //overridden		
 
 	}
 
 }
+
+//1. WorldEducationServices
+//2. University, HigherEducationInstitue
+//3. Cornell, IIT, Xavior

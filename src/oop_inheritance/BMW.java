@@ -6,6 +6,7 @@ package oop_inheritance;
 
 public class BMW extends Car {
 	
+	// This is not Variable Overriding. BMW has it's own max speed/variable
 	int maxSpeed = 200;
 
 	// method overriding: Poly + morphism (Run time - dynamic binding)
@@ -35,3 +36,6 @@ public class BMW extends Car {
 		System.out.println("BMW -- linearMotion");
 	}
 }
+
+// Polymorphism - Many forms of the same method
+// method overloading - Compile time polymorphism

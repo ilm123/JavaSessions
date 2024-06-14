@@ -6,7 +6,7 @@ package oop_inheritance;
 
 public class Truck extends Vehicle {
 
-	public void loading() {
-		System.out.println("truck -- loading ");
+	public void heavyLoading() {
+		System.out.println("truck -- Heave loading ");
 	}
 }

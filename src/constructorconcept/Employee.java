@@ -6,7 +6,7 @@ package constructorconcept;
 
 public class Employee {
 
-	// Class variables
+	// Class variables / Template variables/ Global variables
 	String name;
 	int age;
 	double salary;
@@ -21,15 +21,15 @@ public class Employee {
 	// const.. is used for initializing the class variables with the const.. local
 	// variables using 'this' keyword
 	// const... is used to restrict the object creation - depends on the use case
-	// const... is used for initialization purpose only not for business logic
+	// const... is used for initialization purpose only and not for business logic
 	// but function is used for buss logic, which may or may not return
 	// function can be called multiple times but constructor will be called only
 	// once when object created
 	// a constructor can be called from inside another constructor. But it has to be
 	// the first line
 
-//	public Employee() { // 0 param
-//		System.out.println("Default Constructor");
+//	public Employee() { // 0 param - default constructor
+//		System.out.println("emp - Default Constructor");
 //	}
 //
 //	public Employee(int i) { // 1 param
@@ -40,10 +40,9 @@ public class Employee {
 //		System.out.println(i + name);
 //	}
 
-	public Employee(String name, int age) {
-		this.name = name;
+	public Employee(String name, int age) { // local variables
+		this.name = name; // class variable = local variable
 		this.age = age;
-
 	}
 
 	public Employee(String name, int age, char gender) {
@@ -68,6 +67,7 @@ public class Employee {
 	}
 
 	public static void main(String[] args) {
+//		Employee e1 = new Employee(); // default constructor is called
 		Employee e1 = new Employee("Tom", 35);
 		System.out.println(e1.name);
 		System.out.println(e1.age);
@@ -77,7 +77,14 @@ public class Employee {
 
 		Employee e3 = new Employee("shiv", 20, 12.33, false, 'm');
 		System.out.println(e3.name + " " + e3.age + " " + e3.salary + " " + e3.isActive + " " + e3.gender);
-
+		
 	}
 
 }
+
+// Function will be called when once the object is created:
+// Non static -> e1.<function name>
+// static -> class name.<function name>
+
+// this.age = age; or age = age1
+

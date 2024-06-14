@@ -9,8 +9,8 @@ public class CallByRefConcept {
 	String name;
 	int age; 
 	
-	public static void getInfo (CallByRefConcept t1) {// what is the type of t1? CallbyRefConcept - class name
-		//CallByRefConcept t1 = new CallByRefConcept();
+	public static void getInfo (CallByRefConcept t1) {// what is the type of t1? CallByRefConcept - class name
+//		CallByRefConcept t1 = new CallByRefConcept();
 		System.out.println(t1.name);
 		System.out.println(t1.age);
 		
@@ -23,7 +23,7 @@ public class CallByRefConcept {
 	
 
 	public static void main(String[] args) {
-		CallByRefConcept obj = new CallByRefConcept(); // this object will have 2 references. obj and t1
+		CallByRefConcept obj = new CallByRefConcept(); 
 		obj.name = "Pratheek";
 		obj.age = 18;
 		
@@ -38,3 +38,7 @@ public class CallByRefConcept {
 	}
 
 }
+
+// CallByRefConcept obj = new CallByRefConcept(); -> One object with 2 copies name and age 
+// Deliberately make getInfo() static so that it goes into the common memory and not the heap
+// CallByRefConcept t1 = new CallByRefConcept(); -> one more object is created in the memory
